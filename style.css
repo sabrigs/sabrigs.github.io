@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* Fontes exportadas do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:ital,wght@0,100..900;1,100..900&family=Gochi+Hand&display=swap');
+
+/* Declaração das variáveis (tokens, uhul!) */
+:root {
+    --color-accent: #943A1C;
+    --color-interaction: #531804;
+    --color-neutral: #F2EBE3;
+    --color-text: #1b0f01;
+    --color-on-accent: var(--color-neutral);
+}
+
+body {
+    background-color: var(--color-neutral);
+    max-width: 600px;
+    margin: auto;
+    padding: 64px;
+}
+
+img {
+    border-radius: 4px;
+}
+
+p {
+    font-family: Geist, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+main {
+    text-align: left;
+}
+
+footer {
+    margin-top: 64px;
+    color: #7d7770;
+    border-radius: 4px;
+}
+
+footer > p {
+    font-size: 14px;
+    margin: 0px;
+}
+
+a {
+    font-family: Geist, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 16px;
+    color: var(--color-accent);
+}
+
+a:active {
+    color: hsl(15, 68%, 15%);
+}
+
+a:hover {
+    color: hsl(15, 68%, 25%);
+}
+
+a:visited {
+    color: #08640b;
+}
+
+.title {
+    font-family: Bricolage Grotesque, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    color: var(--color-accent);
+}
+
+#profile-img {
+    width: 150px;
+    height: auto;
+}

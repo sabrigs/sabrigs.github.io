@@ -41,6 +41,7 @@
 body {
     background-color: var(--color-neutral);
     background-image: url('img/pattern.svg');
+    background-attachment: fixed;
     max-width: 600px;
     padding: 64px 24px;
     margin-inline: auto;

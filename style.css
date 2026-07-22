@@ -3,88 +3,120 @@
 /* Fontes exportadas do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:ital,wght@0,100..900;1,100..900&family=Gochi+Hand&display=swap');
 
+@font-face {
+    font-family: MonaspaceNeon;
+    src: url('font/MonaspaceNeonNF-Regular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: MonaspaceRadon;
+    src: url('font/MonaspaceRadonNF-Regular.otf');
+    font-weight: normal;
+}
+
 /* Declaração das variáveis (tokens, uhul!) */
 :root {
-    --color-accent: #943A1C;
+    /* Colors */
+    --color-accent: #A91919;
     --color-interaction: #531804;
-    --color-neutral: #F2EBE3;
-    --color-text: #1b0f01;
+    --color-neutral: #F5F2E8;
+    --color-text: #4b2b06;
+    --color-text-subtle: #7b7254;
     --color-focus: #08640b;
     --color-on-accent: var(--color-neutral);
+    
+    /* Fonts */
+    --font-default: MonaspaceNeon, Arial, Helvetica, sans-serif;
+    --font-subtle: MonaspaceRadon, Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font-default);
+    font-weight: normal;
 }
 
 body {
     background-color: var(--color-neutral);
+    background-image: url('img/pattern.svg');
     max-width: 600px;
-    margin: auto;
-    padding: 64px;
-}
-
-p {
-    font-family: Geist, Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: var(--color-text);
-}
-
-main {
+    padding: 64px 24px;
+    margin-inline: auto;
     text-align: left;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: var(--color-accent);
+}
+
+header h2 {
+    color: var(--color-text-subtle);
+    font-size: 1em;
+}
+
+nav {
+    margin-block: 54px;
+}
+
+nav a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+nav a:focus-visible {
+    outline: 3px dashed var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+nav a:active {
+    color: hsl(15, 68%, 15%);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: hsl(15, 68%, 25%);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    padding-bottom: 16px;
+}
+
+section p {
+    font-size: 1em;
+    margin-block: 16px;
+    color: var(--color-text);
+    line-height: 150%;
+}
+
+section img {
+    max-width: 200px;
+    height: auto;
+    margin-top: 54px;
+}
+
+p.comment {
+    font-family: var(--font-subtle);
+    margin-bottom: 54px;
 }
 
 footer {
     margin-top: 64px;
-    color: #7d7770;
     border-radius: 4px;
 }
 
 footer > p {
-    font-size: 14px;
+    color: var(--color-text-subtle);
+    font-family: var(--font-subtle);
+    font-size: 0.8em;
     margin: 0px;
-}
-
-a {
-    font-family: Geist, Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--color-accent);
-    border: 2px solid;
-    border-radius: 24px;
-    padding-inline: 16px;
-    padding-block: 12px;
-    margin-right: 8px;
-    margin-top: 8px;
-    text-decoration: none;
-    display: inline-block;
-    box-sizing: border-box;
-}
-
-a:focus-visible {
-    outline: 3px dashed var(--color-focus);
-    outline-offset: 2px;
-    
-}
-
-a:active {
-    color: hsl(15, 68%, 15%);
-}
-
-a:hover {
-    color: hsl(15, 68%, 25%);
-}
-
-a:visited {
-    color: hsl(15, 68%, 15%);
-}
-
-.title {
-    font-family: Bricolage Grotesque, Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    color: var(--color-accent);
-}
-
-#profile-img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    border: 2px solid;
-    border-color: #943a1c8f;
 }
